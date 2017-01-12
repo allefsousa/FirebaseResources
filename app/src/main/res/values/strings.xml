@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">CadFirebase</string>
+    <string name="title_activity_cadastro">CadastroActivity</string>
+    <string name="hint_nome">Nome</string>
+    <string name="titulocadastro">Cadastro De Usuarios</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_senha">Senha</string>
+    <string name="Btncadastro">Cadastrar</string>
+    <string name="BtnLogar">Sing in</string>
+    <string name="criarconta">Sing up</string>
+    <string name="esqueceusenha">Redefinir Senha ?</string>
 </resources>

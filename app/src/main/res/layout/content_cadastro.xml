@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_cadastro"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.developer.allef.cadfirebase.CadastroActivity"
+    tools:showIn="@layout/activity_cadastro">
+
+    <android.support.design.widget.TextInputLayout
+
+        android:id="@+id/labelnome"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/colorAccent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/imageView2">
+    <EditText
+        android:id="@+id/txtnome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvtitulo"
+        android:backgroundTint="@color/colorAccent"
+        android:hint="@string/hint_nome"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+
+        android:id="@+id/labelemail"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelnome">
+        <EditText
+            android:id="@+id/txtemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/tvtitulo"
+            android:backgroundTint="@color/colorAccent"
+            android:hint="@string/hint_email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+
+        android:id="@+id/labesenha"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:textColorHint="@color/colorAccent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labelemail">
+
+        <EditText
+            android:id="@+id/txtsenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvtitulo"
+            android:backgroundTint="@color/colorAccent"
+            android:hint="@string/hint_senha"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="@string/Btncadastro"
+        android:id="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/black"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="80dp"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="133dp"
+        app:srcCompat="@drawable/user"
+        android:id="@+id/imageView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="90dp"
+        android:layout_marginStart="90dp" />
+
+
+</RelativeLayout>

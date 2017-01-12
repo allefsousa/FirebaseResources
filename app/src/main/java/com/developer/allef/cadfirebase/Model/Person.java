@@ -1,4 +1,4 @@
-package Model;
+package com.developer.allef.cadfirebase.Model;
 
 /**
  * Created by Allef on 11/01/2017.
