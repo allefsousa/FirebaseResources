@@ -5,7 +5,7 @@ package com.developer.allef.cadfirebase.Model;
  */
 
 public class Usuario {
-
+    private String id;
     private String nome;
     private String email;
     private String senha;
@@ -35,5 +35,13 @@ public class Usuario {
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public void setid(String id) {
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
     }
 }
