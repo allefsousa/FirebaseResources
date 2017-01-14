@@ -1,5 +1,8 @@
 package com.developer.allef.cadfirebase.Model;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 /**
  * Created by Allef on 11/01/2017.
  */
@@ -9,7 +12,7 @@ public class Usuario {
     private String nome;
     private String email;
     private String senha;
-
+    private DatabaseReference databaseReference;
     public Usuario() {
     }
 
@@ -43,5 +46,10 @@ public class Usuario {
 
     public String getId() {
         return id;
+    }
+    public void cFire(){
+        databaseReference = FirebaseDatabase.getInstance().getReference();
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(getId());
+        databaseReference.setValue(this);
     }
 }

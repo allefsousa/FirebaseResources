@@ -1,5 +1,6 @@
 package com.developer.allef.cadfirebase;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.developer.allef.cadfirebase.DataBaseConfig.ConnectionBD;
+import com.developer.allef.cadfirebase.Helper.Base64Custon;
 import com.developer.allef.cadfirebase.Model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -17,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -43,6 +46,7 @@ public class CadastroActivity extends AppCompatActivity {
         em = (EditText)findViewById(R.id.txtemail);
         no = (EditText)findViewById(R.id.txtnome);
         se = (EditText)findViewById(R.id.txtsenha);
+        firebaseAuth = FirebaseAuth.getInstance();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -75,11 +79,15 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                 /*  firebaseUser = FirebaseAuth.getInstance().getCurrentUser(); // pegando o usuario cadastrado
+                   firebaseUser = FirebaseAuth.getInstance().getCurrentUser(); // pegando o usuario cadastrado
                     String id = Base64Custon.converterBase64(usuario.getEmail()); //
                     usuario.setid(id);
-                    databaseReference = FirebaseDatabase.getInstance().getReference().child("Usuarios").child(usuario.getId());
-                    databaseReference.setValue(this);*/
+                    usuario.cFire();
+                    Toast.makeText(CadastroActivity.this,"Cadastro realizado Com Sucesso !!",Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(CadastroActivity.this,LoginActivity.class);
+                    startActivity(intent);
+
+
 
                 }
             }

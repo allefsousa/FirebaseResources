@@ -70,7 +70,7 @@
             android:backgroundTint="@color/colorAccent"
             android:hint="@string/hint_senha"
             android:imeOptions="actionNext"
-            android:inputType="text"
+            android:inputType="textPassword"
             android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
 
