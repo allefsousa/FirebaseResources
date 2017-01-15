@@ -39,7 +39,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.developer.allef.cadfirebase.LoginActivity" />
         </activity>
-        <activity android:name=".CadHomeActivity"></activity>
+        <activity android:name=".CadHomeActivity" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
