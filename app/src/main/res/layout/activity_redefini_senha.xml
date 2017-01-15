@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_redefini_senha"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.developer.allef.cadfirebase.RedefiniSenhaActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:text="@string/redemail"/>
+
+    <android.support.design.widget.TextInputLayout
+
+        android:id="@+id/label"
+        android:layout_width="match_parent"
+        android:layout_marginTop="90dp"
+        android:textColorHint="@color/colorAccent"
+        android:layout_height="wrap_content"
+       >
+
+        <EditText
+            android:id="@+id/txtsenharedefine"
+            android:layout_width="match_parent"
+            android:layout_marginTop="25dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvtitulo"
+            android:backgroundTint="@color/colorAccent"
+            android:hint="@string/hint_email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_marginTop="45dp"
+        android:textStyle="bold"
+        android:id="@+id/recupera"
+        android:text="@string/btnRedefinirsenha"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label"/>
+
+</RelativeLayout>

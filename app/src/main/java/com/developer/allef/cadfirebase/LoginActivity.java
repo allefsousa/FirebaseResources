@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 
@@ -34,7 +34,14 @@ public class LoginActivity extends AppCompatActivity {
         cadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this,CadastroActivity.class);
+                Intent intent = new Intent(LoginActivity.this,CadActivity.class);
+                startActivity(intent);
+            }
+        });
+        recuperarsenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LoginActivity.this,RedefiniSenhaActivity.class);
                 startActivity(intent);
             }
         });

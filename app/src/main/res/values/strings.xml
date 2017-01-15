@@ -9,4 +9,7 @@
     <string name="BtnLogar">Sing in</string>
     <string name="criarconta">Sing up</string>
     <string name="esqueceusenha">Redefinir Senha ?</string>
+    <string name="cadastrousuario">Cadastro De Usuario</string>
+    <string name="redemail">Redefinição De Senha</string>
+    <string name="btnRedefinirsenha">Redefinir</string>
 </resources>
