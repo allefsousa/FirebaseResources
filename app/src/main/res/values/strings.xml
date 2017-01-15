@@ -12,4 +12,5 @@
     <string name="cadastrousuario">Cadastro De Usuario</string>
     <string name="redemail">Redefinição De Senha</string>
     <string name="btnRedefinirsenha">Redefinir</string>
+    <string name="item_sair">Sair</string>
 </resources>

@@ -11,7 +11,9 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,15 +23,6 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".CadastroActivity"
-            android:label="@string/title_activity_cadastro"
-            android:parentActivityName=".LoginActivity"
-            android:theme="@style/CadFire">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.developer.allef.cadfirebase.LoginActivity" />
-        </activity>
-        <activity
             android:name=".CadActivity"
             android:label="@string/cadastrousuario"
             android:parentActivityName=".LoginActivity"
@@ -38,14 +31,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.developer.allef.cadfirebase.LoginActivity" />
         </activity>
-        <activity android:name=".RedefiniSenhaActivity"
+        <activity
+            android:name=".RedefiniSenhaActivity"
             android:label="@string/redemail"
             android:parentActivityName=".LoginActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.developer.allef.cadfirebase.LoginActivity"
-                />
+                android:value="com.developer.allef.cadfirebase.LoginActivity" />
         </activity>
+        <activity android:name=".CadHomeActivity"></activity>
     </application>
 
 </manifest>

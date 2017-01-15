@@ -66,13 +66,16 @@ public class CadActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+
+
                     firebaseUser = FirebaseAuth.getInstance().getCurrentUser(); // pegando o usuario cadastrado
+                    firebaseUser.sendEmailVerification();
+
                     String id = Base64Custon.converterBase64(usuario.getEmail()); //
                     usuario.setid(id);
                     usuario.cFire();
                     Toast.makeText(CadActivity.this,"Cadastro realizado Com Sucesso !!",Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(CadActivity.this,LoginActivity.class);
-                    startActivity(intent);
+                   finish();
 
 
 
@@ -87,6 +90,8 @@ public class CadActivity extends AppCompatActivity {
 
 
     }
+
+
 
     private void Limpar() {
         em.setText("");
