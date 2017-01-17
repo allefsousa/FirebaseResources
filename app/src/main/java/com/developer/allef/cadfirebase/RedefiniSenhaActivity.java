@@ -17,6 +17,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+//import butterknife.BindView;
+//import butterknife.ButterKnife;
+
 public class RedefiniSenhaActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth ;
     private Usuario usuario = new Usuario();
@@ -31,7 +34,7 @@ public class RedefiniSenhaActivity extends AppCompatActivity {
         firebaseAuth = FirebaseAuth.getInstance();
 
 
-        usuario.setEmail(email.getText().toString());
+      usuario.setEmail(email.getText().toString());
 
 
         recuperasenha.setOnClickListener(new View.OnClickListener() {

@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.firebase.ui.auth.AuthUI;
 import com.developer.allef.cadfirebase.Helper.Base64Custon;
 import com.developer.allef.cadfirebase.Helper.Preferencias;
 import com.developer.allef.cadfirebase.Model.Usuario;
@@ -28,13 +28,17 @@ import com.google.firebase.database.DatabaseException;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.auth.*;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+//import butterknife.BindView;
+//import butterknife.ButterKnife;
+
 public class LoginActivity extends AppCompatActivity {
 
-    @BindView(R2.id.txtemaillogin)
+   @BindView(R2.id.txtemaillogin)
     EditText email1;
     @BindView(R2.id.txtsenhalogin)
     EditText senha;
@@ -44,6 +48,7 @@ public class LoginActivity extends AppCompatActivity {
     Button logar;
     @BindView(R2.id.tvrecsenha)
     TextView recuperarsenha;
+    private static final int RC_SIGN_IN = 0;
     private Toast toast;
     private FirebaseAuth firebaseAuth;
     private FirebaseUser firebaseUser;
@@ -60,7 +65,19 @@ public class LoginActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         // pegando instancia do auth
         firebaseAuth = FirebaseAuth.getInstance();
+
+        /********************************************************************
+         * FIREBASE UI AUTH
+         *//*
+        startActivityForResult(AuthUI.getInstance()
+                .createSignInIntentBuilder()
+                .setProviders(
+                        AuthUI.FACEBOOK_PROVIDER,
+                        AuthUI.EMAIL_PROVIDER,
+                        AuthUI.GOOGLE_PROVIDER)
+                .build(), RC_SIGN_IN);*/
         verificarUsuarioLogado();
+
 
 
 
@@ -122,7 +139,7 @@ public class LoginActivity extends AppCompatActivity {
                             abrirTelaPrincipal();
                         }
                         if(!task.isSuccessful()){
-                            firebaseUser.sendEmailVerification();
+                       //     firebaseUser.sendEmailVerification();
                             if(task.getException()instanceof FirebaseNetworkException){
                                 Toast.makeText(LoginActivity.this, "Verifique sua Conexão Com a Internet.", Toast.LENGTH_LONG);
 
